@@ -32,6 +32,12 @@
   <a href="#" onclick="getRepositories()">Get Repositories</a>
 </div>
     </div>
-    <script src="index.js"></script>
+    <script src="index.js">
+      function getRepositories() {
+  const req = new XMLHttpRequest();
+  req.open('GET', 'https://api.github.com/users/octocat/repos');
+  req.send();
+}
+    </script>
   </body>
 </html>
